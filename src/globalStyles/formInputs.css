@@ -33,12 +33,12 @@ INPUT OTHER TYPES & TEXTAREA
   border-radius: 5px;
 }
 
-.label-and-input.accent .input-for-label {
+.accent .input-for-label {
   background-color: transparent;
   border: 2px solid var(--accent);
 }
 
-.label-and-input.main .input-for-label {
+.main .input-for-label {
   background-color: var(--main);
   border: 2px solid var(--main);
 }
