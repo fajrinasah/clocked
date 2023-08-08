@@ -1,0 +1,15 @@
+/*=========================================
+NAVLINK FOR HEADER
+===============================================*/
+
+.navlink-container-text .navlink {
+  color: var(--contrast);
+  padding: 0 0.5rem;
+}
+
+.navlink-container-text a.active {
+  font-weight: bold;
+  background-color: var(--contrast);
+  color: var(--main);
+  border-radius: 3px;
+}

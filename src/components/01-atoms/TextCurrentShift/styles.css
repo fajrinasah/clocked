@@ -1,0 +1,13 @@
+/*=========================================
+TEXT CURRENT SHIFT
+===============================================*/
+.text.current.shift {
+  padding: 1rem;
+  background-color: var(--accent);
+  border-radius: 3px;
+}
+
+.text.current.shift #current-shift-name {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

@@ -14,6 +14,7 @@ IMPORT FROM EXTERNAL SOURCES
 IMPORT FROM INTERNAL SOURCES (from "./globalStyles")
 ---------------------------------------------------*/
 @import "./globalStyles/customToolbar.css";
+@import "./globalStyles/formInputs.css";
 
 /*--------------------------------------------------
 BASIC CONFIGURATIONS
@@ -45,7 +46,7 @@ html {
 /* default font and size */
 body {
   font-family: "B612", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   background-color: var(--main);
   color: var(--contrast);
@@ -85,4 +86,37 @@ MISC.
   flex-direction: column;
   place-content: center;
   place-items: center;
+}
+
+.button-standard,
+button.clocked {
+  min-height: 50px;
+  min-width: 50px;
+  padding: 1rem 1.5rem;
+
+  border-radius: 5px;
+}
+
+.button-standard:hover,
+.navlink-container .icon:hover {
+  transform: scale(0.97);
+  box-shadow: -1px 1px 2px 0px grey;
+}
+
+button:active,
+.button-standard:active,
+a:active {
+  transform: scale(0.94);
+}
+
+button:disabled,
+.button-standard:disabled,
+a:disabled {
+  opacity: 0.6;
+  transform: none;
+  cursor: not-allowed !important;
+}
+
+a:hover {
+  transform: scale(0.97);
 }
