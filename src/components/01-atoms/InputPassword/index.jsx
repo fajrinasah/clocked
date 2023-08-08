@@ -2,15 +2,14 @@ import "./styles.css";
 
 import ButtonHelp from "../ButtonHelp";
 import ModalHelp from "../ModalHelp";
-import CheckboxShowPassword from "../InputCheckboxShowPassword";
+import InputCheckboxShowPassword from "../InputCheckboxShowPassword";
 
 export default function InputPassword({
-  flexDirection = "row",
   color = "accent",
   inputId = "",
   labelText = "",
-  helpClicked,
-  showClicked,
+  helpClicked = () => {},
+  showClicked = () => {},
   required = true,
   inputName = "",
   inputPlaceholder = "",
@@ -32,9 +31,7 @@ export default function InputPassword({
   ];
 
   return (
-    <div
-      className={`input-password label-and-input d-flex-${flexDirection} ${color}`}
-    >
+    <div className={`input-password ${color}`}>
       <label htmlFor={inputId} className="label-for-input">
         {labelText}
       </label>
@@ -54,7 +51,7 @@ export default function InputPassword({
         onChange={onChange}
         onBlur={onBlur}
       />
-      <CheckboxShowPassword showClicked={showClicked} />
+      <InputCheckboxShowPassword showClicked={showClicked} />
     </div>
   );
 }

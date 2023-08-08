@@ -1,13 +1,12 @@
 import "./styles.css";
 
-import CheckboxShowPassword from "../InputCheckboxShowPassword";
+import InputCheckboxShowPassword from "../InputCheckboxShowPassword";
 
 export default function InputConfirmPassword({
-  flexDirection = "col",
   color = "accent",
   inputId = "",
   labelText = "",
-  showClicked,
+  showClicked = () => {},
   passwordIsShown,
   required = true,
   inputName = "",
@@ -18,9 +17,7 @@ export default function InputConfirmPassword({
   onBlur,
 }) {
   return (
-    <div
-      className={`input-confirm-password label-and-input d-flex-${flexDirection} ${color}`}
-    >
+    <div className={`input-confirm-password ${color}`}>
       <label for={inputId} className="label-for-input">
         {labelText}
       </label>
@@ -36,7 +33,7 @@ export default function InputConfirmPassword({
         onChange={onChange}
         onBlur={onBlur}
       />
-      <CheckboxShowPassword showClicked={showClicked} />
+      <InputCheckboxShowPassword showClicked={showClicked} />
     </div>
   );
 }

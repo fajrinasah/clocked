@@ -5,19 +5,21 @@ INPUT CONFIRM PASSWORD
 .input-confirm-password {
   width: 30rem;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 4fr;
+  grid-template: 1fr auto / auto 1fr;
   grid-template-areas: "label show" "input input";
 }
 
 .input-confirm-password .label-for-input {
   grid-area: label;
+  justify-self: start;
 }
 
 .input-confirm-password .input-for-label {
   grid-area: input;
+  border: 1px solid aqua;
 }
 
-.input-confirm-password .checkbox-show-password {
+.input-confirm-password .checkbox-custom {
   grid-area: show;
   justify-self: end;
 }

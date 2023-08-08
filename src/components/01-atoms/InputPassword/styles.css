@@ -4,27 +4,29 @@ INPUT PASSWORD
 
 .input-password {
   width: 30rem;
-  height: 45px;
   display: grid;
-  grid-template: 1fr 1fr / 3fr 1fr 5fr;
+  grid-template: 1fr auto / auto 1fr auto;
   grid-template-areas: "label help show" "input input input";
+  align-items: center;
 }
 
 .input-password .label-for-input {
   grid-area: label;
   justify-self: start;
+  align-self: center;
 }
 
 .input-password .button-help {
   grid-area: help;
+  justify-self: start;
+  margin-left: 0.5rem;
 }
 
 .input-password .input-for-label {
   grid-area: input;
-  margin: 0 1rem;
 }
 
-.input-password .checkbox-show-password {
+.input-password .checkbox-custom {
   grid-area: show;
   justify-self: end;
 }
