@@ -1,0 +1,70 @@
+/* ===============================================
+HEADER
+=================================================*/
+@media screen and (max-width: 500px) {
+  header {
+    width: 12rem;
+    height: 100vh;
+
+    box-shadow: 1px -1px 2px 0px grey;
+  }
+
+  header .logo-container h1 {
+    font-size: 3rem;
+  }
+
+  header .logo-container p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    width: 100%;
+    height: auto;
+
+    box-shadow: -1px 1px 2px 0px grey;
+  }
+
+  header .logo-container h1,
+  header .logo-container p {
+    font-size: 3rem;
+  }
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: var(--accent);
+}
+
+header .logo-container {
+  flex-wrap: wrap;
+}
+
+header .logo-container h1,
+header .logo-container p {
+  padding: 1rem;
+  font-family: "Forum", serif;
+}
+
+header .logo-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  box-shadow: -1px 1px 2px 0px black;
+}
+
+header p.full-name {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+header .button-standard {
+  height: 50px;
+}

@@ -1,33 +1,28 @@
-// buttons
-import ButtonClocked from "../../01-atoms/ButtonClocked";
-import ButtonHelp from "../../01-atoms/ButtonHelp";
-import ButtonStandard from "../../01-atoms/ButtonStandard";
+import { useState } from "react";
 
-// form inputs
-import InputCheckboxShowPassword from "../../01-atoms/InputCheckboxShowPassword";
-import InputConfirmPassword from "../../01-atoms/InputConfirmPassword";
-import InputDate from "../../01-atoms/InputDate";
-import InputEmail from "../../01-atoms/InputEmail";
-import InputMonth from "../../01-atoms/InputMonth";
-import InputNumber from "../../01-atoms/InputNumber";
-import InputPassword from "../../01-atoms/InputPassword";
-import InputSelect from "../../01-atoms/InputSelect";
-import InputSubmit from "../../01-atoms/InputSubmit";
-import InputText from "../../01-atoms/InputText";
-import InputTime from "../../01-atoms/InputTime";
+import FormAccountActivation from "../../02-molecules/FormAccountActivation";
+import FormAddEmployee from "../../02-molecules/FormAddEmployee";
+import FormAddShift from "../../02-molecules/FormAddShift";
+import FormLogin from "../../02-molecules/FormLogin";
+import FormSetSalary from "../../02-molecules/FormSetSalary";
+import FormSetShift from "../../02-molecules/FormSetShift";
+import FormVerifyOtp from "../../02-molecules/FormVerifyOtp";
+import Pagination from "../../02-molecules/Pagination";
 
-import ModalDefaultText from "../../01-atoms/ModalDefaultText";
-import NavLinkForHeader from "../../01-atoms/NavLinkForHeader";
-import TextCurrentDateTime from "../../01-atoms/TextCurrentDatetime";
-import TextCurrentLogStatus from "../../01-atoms/TextCurrentLogStatus";
-import TextCurrentShift from "../../01-atoms/TextCurrentShift";
-import TitlePage from "../../01-atoms/TitlePage";
-import ToolbarInputSelect from "../../01-atoms/ToolbarInputSelect";
-import ToolbarInputSort from "../../01-atoms/ToolbarInputSort";
+import TableRowLogs from "../../02-molecules/TableRowLogs";
+import TableRowReports from "../../02-molecules/TableRowReports";
+
+import ToolbarsLogs from "../../02-molecules/ToolbarsLogs";
+import ToolbarsReports from "../../02-molecules/ToolbarsReports";
+
+import Header from "../../03-organisms/Header";
+import ModalConfirmation from "../../03-organisms/ModalConfirmation";
 
 import "./styles.css";
 
 export default function TestPage() {
+  const [currentFilteringOption, setCurrentFilteringOption] = useState("month");
+
   const shifts = [
     { id: 1, name: "Morning Shift", selected: false },
     { id: 2, name: "Afternoon Shift", selected: false },
@@ -36,96 +31,126 @@ export default function TestPage() {
 
   const sortingOptions = [
     { id: "date", name: "Date", selected: false },
-    { id: "deduction", name: "Deduction", selected: false },
+    { id: "total", name: "Total", selected: false },
   ];
+
+  const positions = [
+    { id: 1, name: "Baker" },
+    { id: 2, name: "Cashier" },
+    { id: 3, name: "Tea Sommelier" },
+  ];
+
+  const employees = [
+    { id: "kory.vincelette@allfreemail.net", name: "Kory Vincelette" },
+    { id: "millicent.calandra@allfreemail.net", name: "Millicent Calandra" },
+  ];
+
+  const filteringOptions = [
+    {
+      id: "month",
+      name: "Month",
+      selected: currentFilteringOption === "month",
+    },
+    {
+      id: "year",
+      name: "Last year",
+      selected: currentFilteringOption === "year",
+    },
+  ];
+
+  const handleFilteringOption = () => {
+    if (currentFilteringOption === "month") {
+      setCurrentFilteringOption("year");
+    } else {
+      setCurrentFilteringOption("month");
+    }
+  };
 
   return (
     <div id="test-page">
-      <ButtonClocked clockedType="Clock Out" />
       <br />
       <br />
-      <ButtonHelp />
-      <br />
-      <br />
-      <ButtonStandard
-        story="raised-warning"
-        bold="bold"
-        width="auto"
-        content="Button"
+      <ModalConfirmation type="standard" />
+      {/* <Header fullName="Vanilla Bethaiume" roleId={1} /> */}
+      {/* <FormAccountActivation /> */}
+      {/* <FormAddEmployee positionsArr={positions} /> */}
+      {/* <FormAddShift /> */}
+      {/* <FormLogin /> */}
+      {/* <FormSetSalary employeesArr={employees} /> */}
+      {/* <FormSetShift employeesArr={employees} shiftsArr={shifts} /> */}
+      {/* <FormVerifyOtp /> */}
+      {/* <Pagination totalPage="3" /> */}
+      {/* <TableRowLogs type="headrow" />
+      <TableRowLogs
+        type="bodyrow-light"
+        scheduledDate="2023-08-07"
+        shiftName="Morning Shift"
+        shiftStart="07:00"
+        shiftEnd="12:00"
+        clockedIn="08:46"
+        clockedOut="12:01"
+        salaryDeduction="0"
       />
+      <TableRowLogs
+        type="bodyrow-dark"
+        scheduledDate="2023-08-07"
+        shiftName="Morning Shift"
+        shiftStart="07:00"
+        shiftEnd="12:00"
+        clockedIn="08:46"
+        clockedOut="12:01"
+        salaryDeduction="0"
+      /> */}
+
+      {/* <TableRowReports type="headrow" />
+      <TableRowReports
+        type="bodyrow-light"
+        period="2023-06"
+        baseAmount="6600000"
+        totalDeduction="450000"
+        totalAmount="5750000"
+      />
+      <TableRowReports
+        type="bodyrow-dark"
+        period="2023-06"
+        baseAmount="6600000"
+        totalDeduction="450000"
+        totalAmount="5750000"
+      /> */}
+
+      {/* <ToolbarsLogs
+        sortingOptions={sortingOptions}
+        currentSortingMethod="ASC"
+      /> */}
+
+      {/* <ToolbarsReports
+        sortingOptions={sortingOptions}
+        filteringOptions={filteringOptions}
+        currentSortingMethod="ASC"
+        handleFilteringOption={handleFilteringOption}
+        currentFilteringOption={currentFilteringOption}
+      /> */}
+      <br />
+      <br />
 
       <br />
       <br />
-      <InputCheckboxShowPassword />
+
       <br />
       <br />
-      <InputConfirmPassword labelText="Confirm" />
+
       <br />
       <br />
-      <InputDate labelText="Date" />
+
       <br />
       <br />
-      <InputEmail labelText="Email" />
+
       <br />
       <br />
-      <InputMonth labelText="Month" />
+
       <br />
       <br />
-      <InputNumber labelText="Amount" />
-      <br />
-      <br />
-      <InputPassword labelText="Password" />
-      <br />
-      <br />
-      <InputSelect labelText="Shift" />
-      <br />
-      <br />
-      <InputSubmit value="Submit" story="ghost-accent" width="full" />
-      <br />
-      <br />
-      <InputText labelText="Full name" />
-      <br />
-      <br />
-      <InputTime labelText="Start" />
-      <br />
-      <br />
-      <ModalDefaultText type="toast" content="notification" />
-      <br />
-      <br />
-      <NavLinkForHeader content="Add Employee" />
-      <br />
-      <br />
-      <TextCurrentDateTime
-        dateTimeDisplayForDate="Tuesday, August 8th 2023"
-        dateTimeDisplayForTime="16:00"
-        dateTimeForDate="2023-08-08"
-        dateTimeForTime="16:00:00"
-      />
-      <br />
-      <br />
-      <TextCurrentShift
-        shiftName="Afternoon Shift"
-        shiftStart="12:00"
-        shiftEnd="17:00"
-      />
-      <br />
-      <br />
-      <TextCurrentLogStatus logStatus="clocked in" />
-      <br />
-      <br />
-      <TitlePage content="Add Employee" />
-      <br />
-      <br />
-      <div className="bg-accent">
-        <ToolbarInputSelect label="Shift" options={shifts} />
-        <br />
-        <br />
-        <ToolbarInputSort
-          label="Sort by"
-          options={sortingOptions}
-          currentSortingMethod="ASC"
-        />
-      </div>
+
       <br />
       <br />
     </div>
