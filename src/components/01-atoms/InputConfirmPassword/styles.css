@@ -1,0 +1,25 @@
+/*=============================================
+INPUT CONFIRM PASSWORD
+===============================================*/
+
+.input-confirm-password {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr auto / auto 1fr;
+  grid-template-areas: "label show" "input input";
+  padding: 1rem 0;
+}
+
+.input-confirm-password .label-for-input {
+  grid-area: label;
+  justify-self: start;
+}
+
+.input-confirm-password .input-for-label {
+  grid-area: input;
+}
+
+.input-confirm-password .checkbox-custom {
+  grid-area: show;
+  justify-self: end;
+}

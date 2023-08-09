@@ -1,0 +1,16 @@
+/*=============================================
+INPUT RADIO SORT
+===============================================*/
+.radio-container label {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.radios-container input[type="radio"] {
+  cursor: pointer;
+
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+}

@@ -1,0 +1,38 @@
+/*=============================================
+INPUT PASSWORD
+===============================================*/
+
+.input-password {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr auto / auto 1fr auto;
+  grid-template-areas: "label help show" "input input input";
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.input-password .label-for-input {
+  grid-area: label;
+  justify-self: start;
+  align-self: center;
+}
+
+.input-password .button-help {
+  grid-area: help;
+  justify-self: start;
+  margin-left: 0.5rem;
+}
+
+.input-password .input-for-label {
+  grid-area: input;
+}
+
+.input-password .checkbox-custom {
+  grid-area: show;
+  justify-self: end;
+}
+
+.input-password .guides-container {
+  position: relative;
+  z-index: 2;
+}

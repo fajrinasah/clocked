@@ -1,0 +1,52 @@
+/*======================================================
+INPUT OTHER TYPES
+// color input based on what color the border should be
+========================================================*/
+.label-and-input {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/*------------LABEL----------------*/
+.label-for-input {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+
+  color: var(--contrast);
+}
+
+.label-for-input {
+  align-self: flex-start;
+}
+
+/*------------INPUT----------------*/
+
+.input-for-label {
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  font-family: "B612", sans-serif;
+  line-height: 1.5;
+
+  border-radius: 5px;
+}
+
+.accent .input-for-label {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+}
+
+.main .input-for-label {
+  background-color: var(--main);
+  border: 2px solid var(--main);
+}
+
+/*------------------INPUT SUBMIT----------------*/
+.input-submit {
+  width: 100%;
+  place-content: center;
+  place-items: center;
+  margin: 3rem 0;
+}

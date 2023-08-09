@@ -1,0 +1,21 @@
+/* ===============================================
+BUTTON HELP
+=================================================*/
+.button-help {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  background-color: transparent;
+  border: 1px solid var(--contrast);
+  border-radius: 25px;
+
+  cursor: pointer;
+}
+
+.question-icon {
+  color: var(--contrast);
+  font-size: 2.2rem;
+}
