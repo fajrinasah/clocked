@@ -15,6 +15,7 @@ IMPORT FROM INTERNAL SOURCES (from "./globalStyles")
 ---------------------------------------------------*/
 @import "./globalStyles/customToolbar.css";
 @import "./globalStyles/formInputs.css";
+@import "./globalStyles/form.css";
 
 /*--------------------------------------------------
 BASIC CONFIGURATIONS

@@ -1,0 +1,33 @@
+/*======================================================
+FORM
+========================================================*/
+form.account-activation,
+form.login,
+form.verify-otp {
+  min-width: 30rem;
+  max-width: 60rem;
+}
+
+form.add-employee,
+form.add-shift,
+form.set-salary,
+form.set-shift,
+form.toolbars {
+  width: 20rem;
+}
+
+form .error-container {
+  width: 100%;
+}
+
+form.toolbars {
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: var(--accent);
+  border-radius: 3px;
+}
+
+form.toolbars .button-standard#button-show-results {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,29 @@
+/* ===============================================
+NAV
+=================================================*/
+@media screen and (max-width: 500px) {
+  ul.nav {
+    width: 100%;
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  ul.nav {
+    width: auto;
+    justify-content: space-between;
+    justify-items: center;
+  }
+}
+
+ul.nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+li.navlink-li {
+  padding: 0 1rem;
+}
