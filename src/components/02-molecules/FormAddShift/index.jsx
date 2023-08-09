@@ -7,43 +7,43 @@ export default function FormAddShift({
   handleSubmit = () => {},
   handleBlur = () => {},
   handleChange = () => {},
-  shiftNameTouched = false,
-  shiftNameErrors = false,
-  shiftNameValue,
-  shiftStartTouched = false,
-  shiftStartErrors = false,
-  shiftStartValue,
-  shiftEndTouched = false,
-  shiftEndErrors = false,
-  shiftEndValue,
+  nameTouched = false,
+  nameErrors = false,
+  nameValue,
+  fromTimeTouched = false,
+  fromTimeErrors = false,
+  fromTimeValue,
+  toTimeTouched = false,
+  toTimeErrors = false,
+  toTimeValue,
   isSubmitting = false,
 }) {
   const submitDisabled =
-    !shiftNameValue ||
-    !shiftStartValue ||
-    !shiftEndValue ||
-    shiftNameErrors ||
-    shiftStartErrors ||
-    shiftEndErrors ||
+    !nameValue ||
+    !fromTimeValue ||
+    !toTimeValue ||
+    nameErrors ||
+    fromTimeErrors ||
+    toTimeErrors ||
     isSubmitting;
 
   return (
     <form onSubmit={handleSubmit} className="add-shift d-flex-col">
       <InputText
         color="accent"
-        inputId="shift-name"
+        inputId="name"
         labelText="Name"
         required={true}
-        inputName="shift-name"
-        value={shiftNameValue}
+        inputName="name"
+        value={nameValue}
         onBlur={handleBlur}
         onChange={handleChange}
       />
 
-      {shiftNameTouched && shiftNameErrors && (
+      {nameTouched && nameErrors && (
         <div className="error-container d-flex-row">
           <ModalDefaultText
-            content={shiftNameErrors}
+            content={nameErrors}
             color="contrast"
             bgColor="accent"
           />
@@ -52,19 +52,19 @@ export default function FormAddShift({
 
       <InputTime
         color="accent"
-        inputId="shift-start"
+        inputId="fromTime"
         labelText="Start"
         required={true}
-        inputName="shift-start"
-        value={shiftStartValue}
+        inputName="fromTime"
+        value={fromTimeValue}
         onBlur={handleBlur}
         onChange={handleChange}
       />
 
-      {shiftStartTouched && shiftStartErrors && (
+      {fromTimeTouched && fromTimeErrors && (
         <div className="error-container d-flex-row">
           <ModalDefaultText
-            content={shiftStartErrors}
+            content={fromTimeErrors}
             color="contrast"
             bgColor="accent"
           />
@@ -73,19 +73,19 @@ export default function FormAddShift({
 
       <InputTime
         color="accent"
-        inputId="shift-end"
+        inputId="toTime"
         labelText="End"
         required={true}
-        inputName="shift-end"
-        value={shiftEndValue}
+        inputName="toTime"
+        value={toTimeValue}
         onBlur={handleBlur}
         onChange={handleChange}
       />
 
-      {shiftEndTouched && shiftEndErrors && (
+      {toTimeTouched && toTimeErrors && (
         <div className="error-container d-flex-row">
           <ModalDefaultText
-            content={shiftEndErrors}
+            content={toTimeErrors}
             color="contrast"
             bgColor="accent"
           />

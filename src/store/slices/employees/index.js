@@ -21,6 +21,7 @@ const isErrorOccured = (action) => {
 const employeesSlice = createSlice({
   name: "employees",
   initialState: INITIAL_STATE,
+
   extraReducers: (builder) => {
     // ADD EMPLOYEE
     builder.addCase(addEmployee.pending, (state, action) => {
@@ -37,9 +38,17 @@ const employeesSlice = createSlice({
     });
 
     builder.addCase(getEmployees.fulfilled, (state, action) => {
+      const getEmployeesArr = (employees) => {
+        const employeesArr = [];
+        employees.map((obj) => {
+          employeesArr.push({ id: obj.email, name: obj.fullName });
+        });
+        return employeesArr;
+      };
+
       state = Object.assign(state, {
         isLoading: false,
-        employees: action.payload?.employees,
+        employees: getEmployeesArr(action.payload?.employees),
       });
     });
 

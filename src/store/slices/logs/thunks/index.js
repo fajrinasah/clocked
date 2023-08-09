@@ -9,6 +9,25 @@ import {
 /* ==================================================================== */
 // GET LOGS
 /* ==================================================================== */
+export const getTodayLog = createAsyncThunk(
+  "logs/getTodayLog",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const { data } = await api.get("/logs/today");
+
+      return data.log;
+    } catch (error) {
+      toastError(error.response ? error.response.data?.message : error);
+      return rejectWithValue(
+        error.response ? error.response.data?.message : error
+      );
+    }
+  }
+);
+
+/* ==================================================================== */
+// GET LOGS
+/* ==================================================================== */
 export const getLogs = createAsyncThunk(
   "logs/getLogs",
   async (payload, { rejectWithValue }) => {
@@ -36,7 +55,7 @@ export const doClock = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       // payload: {scheduledDate: "YYYY-MM-DD", type: "in" or "out", time: "hh:mm:ss"}
-      const { data } = await api.patch("/logs/clocked-time");
+      const { data } = await api.patch("/logs/clocked-time", payload);
 
       toastSuccess(data?.message);
 

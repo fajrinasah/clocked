@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-import InputSelect from "../../01-atoms/InputSelect";
+import InputSelectFormik from "../../01-atoms/InputSelectFormik";
 import InputDate from "../../01-atoms/InputDate";
 import InputNumber from "../../01-atoms/InputNumber";
 import InputSubmit from "../../01-atoms/InputSubmit";
@@ -39,13 +39,10 @@ export default function FormSetShift({
 
   return (
     <form onSubmit={handleSubmit} className="set-shift d-flex-col">
-      <InputSelect
+      <InputSelectFormik
         color="accent"
-        inputId="employee-email"
+        inputId="employeeEmail"
         labelText="Employee"
-        value={employeeEmailValue}
-        onBlur={handleBlur}
-        onChange={handleChange}
         optionsArray={employeesArr}
       />
 
@@ -61,10 +58,10 @@ export default function FormSetShift({
 
       <InputDate
         color="accent"
-        inputId="scheduled-date"
+        inputId="scheduledDate"
         labelText="Date"
         required={true}
-        inputName="scheduled-date"
+        inputName="scheduledDate"
         min={DateTime.now().toFormat("yyyy-LL-dd")}
         value={scheduledDateValue}
         onBlur={handleBlur}
@@ -81,13 +78,10 @@ export default function FormSetShift({
         </div>
       )}
 
-      <InputSelect
+      <InputSelectFormik
         color="accent"
-        inputId="shift-id"
+        inputId="shiftId"
         labelText="Shift"
-        value={shiftIdValue}
-        onBlur={handleBlur}
-        onChange={handleChange}
         optionsArray={shiftsArr}
       />
 
@@ -103,10 +97,10 @@ export default function FormSetShift({
 
       <InputNumber
         color="accent"
-        inputId="salary-deduction"
+        inputId="salaryDeduction"
         labelText="Initial salary"
         required={true}
-        inputName="salary-deduction"
+        inputName="salaryDeduction"
         value={salaryDeductionValue}
         onBlur={handleBlur}
         onChange={handleChange}

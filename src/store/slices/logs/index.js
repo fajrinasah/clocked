@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // THUNKS
-import { getLogs, doClock } from "./thunks";
+import { getTodayLog, getLogs, doClock } from "./thunks";
 
 // INITIAL STATE
 const INITIAL_STATE = {
@@ -14,6 +14,7 @@ const INITIAL_STATE = {
     logsLimit: null,
     logs: [],
   },
+  log: {},
 };
 
 // GLOBAL ERROR HANDLER
@@ -36,6 +37,16 @@ const logsSlice = createSlice({
   },
 
   extraReducers: (builder) => {
+    // GET TODAY'S LOG
+    builder.addCase(getTodayLog.pending, (state, action) => {
+      state.isLoading = true;
+    });
+
+    builder.addCase(getTodayLog.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.log = action.payload;
+    });
+
     // GET LOGS
     builder.addCase(getLogs.pending, (state, action) => {
       state.isLoading = true;

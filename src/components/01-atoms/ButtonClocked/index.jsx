@@ -6,7 +6,7 @@ export default function ButtonClocked({
 }) {
   return (
     <button className="clocked" onClick={onClick}>
-      {clockedType}
+      Clock {clockedType}
     </button>
   );
 }
