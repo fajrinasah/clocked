@@ -1,5 +1,5 @@
 import InputEmail from "../../01-atoms/InputEmail";
-import InputSelect from "../../01-atoms/InputSelect";
+import InputSelectFormik from "../../01-atoms/InputSelectFormik";
 import InputSubmit from "../../01-atoms/InputSubmit";
 import ModalDefaultText from "../../01-atoms/ModalDefaultText";
 
@@ -46,13 +46,10 @@ export default function FormAddEmployee({
         </div>
       )}
 
-      <InputSelect
+      <InputSelectFormik
         color="accent"
-        inputId="position-id"
+        inputId="positionId"
         labelText="Position"
-        value={positionIdValue}
-        onBlur={handleBlur}
-        onChange={handleChange}
         optionsArray={positionsArr}
       />
 

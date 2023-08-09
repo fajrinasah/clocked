@@ -46,10 +46,10 @@ export default function FormAccountActivation({
     <form onSubmit={handleSubmit} className="account-activation d-flex-col">
       <InputText
         color="accent"
-        inputId="full-name"
+        inputId="fullName"
         labelText="Full name"
         required={true}
-        inputName="full-name"
+        inputName="fullName"
         value={fullNameValue}
         onBlur={handleBlur}
         onChange={handleChange}

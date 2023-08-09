@@ -46,3 +46,22 @@ export const getEmployees = createAsyncThunk(
     }
   }
 );
+
+/* ==================================================================== */
+// GET POSITIONS
+/* ==================================================================== */
+export const getPositions = createAsyncThunk(
+  "employees/getPositions",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const { data } = await api.get("/employees/positions");
+
+      return data;
+    } catch (error) {
+      toastError(error.response ? error.response.data?.message : error);
+      return rejectWithValue(
+        error.response ? error.response.data?.message : error
+      );
+    }
+  }
+);

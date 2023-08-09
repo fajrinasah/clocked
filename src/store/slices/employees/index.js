@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // THUNKS
-import { addEmployee, getEmployees } from "./thunks";
+import { addEmployee, getEmployees, getPositions } from "./thunks";
 
 // INITIAL STATE
 const INITIAL_STATE = {
   isLoading: false,
   employees: [],
+  positions: [],
 };
 
 // GLOBAL ERROR HANDLER
@@ -39,6 +40,18 @@ const employeesSlice = createSlice({
       state = Object.assign(state, {
         isLoading: false,
         employees: action.payload?.employees,
+      });
+    });
+
+    // GET POSITIONS
+    builder.addCase(getPositions.pending, (state, action) => {
+      state.isLoading = true;
+    });
+
+    builder.addCase(getPositions.fulfilled, (state, action) => {
+      state = Object.assign(state, {
+        isLoading: false,
+        positions: action.payload?.positions,
       });
     });
 
