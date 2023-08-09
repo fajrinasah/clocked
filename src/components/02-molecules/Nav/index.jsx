@@ -8,15 +8,15 @@ export default function Nav({ roleId = 1 }) {
       <ul className="nav">
         <li className="navlink-li">
           <NavLinkForHeader
-            destination="/add/employee"
-            navlinkName="add-employee"
-            content="Add Employee"
+            destination="/shifts/set-shift"
+            navlinkName="set-shift"
+            content="Set Shift"
           />
         </li>
 
         <li className="navlink-li">
           <NavLinkForHeader
-            destination="/add/shift"
+            destination="/shifts/add-shift"
             navlinkName="add-shift"
             content="Add Shift"
           />
@@ -24,17 +24,17 @@ export default function Nav({ roleId = 1 }) {
 
         <li className="navlink-li">
           <NavLinkForHeader
-            destination="/set/salary"
-            navlinkName="set-salary"
-            content="Set Salary"
+            destination="/employees/add-employee"
+            navlinkName="add-employee"
+            content="Add Employee"
           />
         </li>
 
         <li className="navlink-li">
           <NavLinkForHeader
-            destination="/set/shift"
-            navlinkName="set-shift"
-            content="Set Shift"
+            destination="/salaries/set-salary"
+            navlinkName="set-salary"
+            content="Set Salary"
           />
         </li>
       </ul>
@@ -60,7 +60,7 @@ export default function Nav({ roleId = 1 }) {
 
         <li className="navlink-li">
           <NavLinkForHeader
-            destination="/payroll"
+            destination="/salaries/reports"
             navlinkName="payroll"
             content="Payroll"
           />

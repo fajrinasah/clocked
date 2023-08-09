@@ -34,8 +34,19 @@ MODAL DEFAULT TEXT
 
 /*--------------TYPE: TOAST-------------*/
 
+@media screen and (max-width: 900px) {
+  .modal-default-text.toast {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .modal-default-text.toast {
+    width: 40%;
+  }
+}
+
 .modal-default-text.toast {
-  width: 90%;
   box-shadow: 2px 1px 10px 0px grey;
 }
 

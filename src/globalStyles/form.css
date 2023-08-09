@@ -1,23 +1,46 @@
 /*======================================================
 FORM
 ========================================================*/
-form.account-activation,
-form.login,
-form.verify-otp {
-  min-width: 30rem;
-  max-width: 60rem;
+
+@media screen and (min-width: 900px) {
+  form.account-activation,
+  form.login,
+  form.verify-otp,
+  form.add-employee,
+  form.add-shift,
+  form.set-salary,
+  form.set-shift,
+  form.toolbars,
+  form .error-container {
+    width: 40rem;
+  }
 }
 
-form.add-employee,
-form.add-shift,
-form.set-salary,
-form.set-shift,
-form.toolbars {
-  width: 20rem;
+@media screen and (max-width: 900px) {
+  form.account-activation,
+  form.login,
+  form.verify-otp,
+  form.account-activation .error-container,
+  form.login .error-container,
+  form.verify-otp .error-container {
+    width: 30rem;
+  }
+
+  form.add-employee,
+  form.add-shift,
+  form.set-salary,
+  form.set-shift,
+  form.toolbars,
+  form.add-employee .error-container,
+  form.add-shift .error-container,
+  form.set-salary .error-container,
+  form.set-shift .error-container {
+    width: 20rem;
+  }
 }
 
-form .error-container {
-  width: 100%;
+form {
+  transition: all 0.3s ease-in-out;
 }
 
 form.toolbars {
@@ -30,4 +53,8 @@ form.toolbars {
 form.toolbars .button-standard#button-show-results {
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+form .error-container .modal-default-text {
+  width: 100%;
 }
