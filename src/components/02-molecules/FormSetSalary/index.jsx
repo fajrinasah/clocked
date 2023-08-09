@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-import InputSelect from "../../01-atoms/InputSelect";
+import InputSelectFormik from "../../01-atoms/InputSelectFormik";
 import InputMonth from "../../01-atoms/InputMonth";
 import InputNumber from "../../01-atoms/InputNumber";
 import InputSubmit from "../../01-atoms/InputSubmit";
@@ -33,13 +33,10 @@ export default function FormSetSalary({
 
   return (
     <form onSubmit={handleSubmit} className="set-salary d-flex-col">
-      <InputSelect
+      <InputSelectFormik
         color="accent"
-        inputId="employee-email"
+        inputId="employeeEmail"
         labelText="Employee"
-        value={employeeEmailValue}
-        onBlur={handleBlur}
-        onChange={handleChange}
         optionsArray={employeesArr}
       />
 
@@ -55,10 +52,10 @@ export default function FormSetSalary({
 
       <InputMonth
         color="accent"
-        inputId="shift-start"
+        inputId="salaryPeriod"
         labelText="Period"
         required={true}
-        inputName="shift-start"
+        inputName="salaryPeriod"
         min={DateTime.now().minus({ years: 1 }).toFormat("yyyy-LL")}
         max={DateTime.now().toFormat("yyyy-LL")}
         value={salaryPeriodValue}
@@ -78,10 +75,10 @@ export default function FormSetSalary({
 
       <InputNumber
         color="accent"
-        inputId="shift-end"
+        inputId="baseAmount"
         labelText="Base amount"
         required={true}
-        inputName="shift-end"
+        inputName="baseAmount"
         value={baseAmountValue}
         onBlur={handleBlur}
         onChange={handleChange}

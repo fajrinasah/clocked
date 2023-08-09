@@ -1,6 +1,9 @@
 /*=========================================
 TEXT CURRENT LOG STATUS
 ===============================================*/
+.text.current.log-status {
+  padding: 2rem 0;
+}
 
 .text.current.log-status #current-log-status {
   margin-top: 1rem;

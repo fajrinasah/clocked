@@ -13,6 +13,9 @@ PAGE
 }
 
 @media screen and (min-width: 900px) {
+  .page {
+    padding-top: 10rem;
+  }
 }
 
 .page .title-page {

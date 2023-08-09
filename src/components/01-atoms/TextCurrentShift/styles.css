@@ -3,6 +3,7 @@ TEXT CURRENT SHIFT
 ===============================================*/
 .text.current.shift {
   padding: 1rem;
+  margin: 2rem 0;
   background-color: var(--accent);
   border-radius: 3px;
 }
