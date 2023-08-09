@@ -47,6 +47,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: fixed;
+  z-index: 5;
 
   background-color: var(--accent);
   transition: all 0.3s ease-in-out;

@@ -62,7 +62,7 @@ function App() {
           element={<PageTokenVerification />}
         />
         <Route
-          path="/auth/activate-account"
+          path="/auth/activate-account/:uuidWithContext"
           element={<PageAccountActivation />}
         />
 

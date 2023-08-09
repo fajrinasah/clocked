@@ -2,6 +2,14 @@
 PAGE
 ========================================================*/
 @media screen and (max-width: 900px) {
+  .page.not-full {
+    width: 100%;
+    padding-left: 12rem;
+  }
+
+  .page.activate-account #activate-account-instruction {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -9,4 +17,8 @@ PAGE
 
 .page .title-page {
   width: 90%;
+}
+
+.page.activate-account #activate-account-instruction {
+  text-align: center;
 }

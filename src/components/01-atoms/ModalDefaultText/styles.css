@@ -12,6 +12,11 @@ MODAL DEFAULT TEXT
   border-radius: 10px;
 }
 
+.modal-default-text .modal-content {
+  width: 100%;
+  padding: 0 1rem;
+}
+
 .modal-default-text.bold {
   font-weight: bold;
 }

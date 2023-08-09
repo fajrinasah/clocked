@@ -1,12 +1,23 @@
 /*=========================================
 MODAL HELP SHOW GUIDELINE
 ===============================================*/
+@media screen and (min-width: 900px) {
+  .modal-help {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .modal-help {
+    width: 220px;
+  }
+}
+
 .modal-help {
   position: absolute;
   bottom: 50px;
   left: 10px;
 
-  width: 340px;
   padding: 1rem 1rem 1rem 3rem;
 
   border-style: solid;
