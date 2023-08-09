@@ -19,3 +19,15 @@ BUTTON HELP
   color: var(--contrast);
   font-size: 2.2rem;
 }
+
+.button-help:hover,
+.button-help .question-icon:hover {
+  transform: scale(0.97);
+  box-shadow: -1px 1px 2px 0px grey;
+  border-radius: 50%;
+}
+
+.button-help:active,
+.button-help .question-icon:active {
+  transform: scale(0.94);
+}
