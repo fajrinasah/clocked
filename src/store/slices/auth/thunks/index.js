@@ -85,7 +85,7 @@ export const activateAccount = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       // payload: {uuidWithContext, body: {fullName, dob, password}}
-      await api.patch(
+      const { data } = await api.patch(
         `/auth/activation-data/${payload?.uuidWithContext}`,
         payload?.body
       );
