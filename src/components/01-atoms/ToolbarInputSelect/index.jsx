@@ -1,31 +1,35 @@
-import "./styles.css";
-
 export default function ToolbarInputSelect({
-  forId = "",
-  label = "Choose an option",
-  options = [{ id: 0, name: "", selected: false }],
-  refFilterOption,
+  flexDirection = "col",
+  color = "accent",
+  inputId,
+  labelText,
+  ref,
+  onChange,
+  optionsArray = [{ id: 1, name: "", selected: false }],
 }) {
-  const RenderOptions = () =>
-    options.map((option) => {
+  const RenderOptions = () => {
+    return optionsArray.map((option) => {
       return (
-        <option key={option.id} value={option.id} selected={option.selected}>
-          {option.name}
+        <option key={option?.id} value={option?.id} selected={option?.selected}>
+          {option?.name}
         </option>
       );
     });
+  };
 
   return (
-    <div className="input-toolbar-select d-flex-row">
-      <label htmlFor={`${forId}-select`} className="label-for-select">
-        {label}
+    <div
+      className={`input-select label-and-input d-flex-${flexDirection} ${color}`}
+    >
+      <label htmlFor={inputId} className="label-for-input">
+        {labelText}
       </label>
-
       <select
-        name={`${forId}-select`}
-        id={`${forId}-select`}
-        className="select-for-label"
-        ref={refFilterOption}
+        className="input-for-label"
+        name={inputId}
+        id={inputId}
+        ref={ref}
+        onChange={onChange}
       >
         <RenderOptions />
       </select>

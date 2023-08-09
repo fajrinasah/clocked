@@ -13,8 +13,8 @@ export default function InputConfirmPassword({
   inputPlaceholder = "",
   title = "",
   value,
-  onChange,
-  onBlur,
+  onChange = () => {},
+  onBlur = () => {},
 }) {
   return (
     <div className={`input-confirm-password ${color}`}>

@@ -1,11 +1,11 @@
 /*======================================================
-INPUT OTHER TYPES & TEXTAREA
+INPUT OTHER TYPES
 // color input based on what color the border should be
 ========================================================*/
 .label-and-input {
   display: flex;
-  /* width: 100%; */
-  max-width: 30rem;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 /*------------LABEL----------------*/
@@ -45,7 +45,8 @@ INPUT OTHER TYPES & TEXTAREA
 
 /*------------------INPUT SUBMIT----------------*/
 .input-submit {
-  max-width: 30rem;
+  width: 100%;
   place-content: center;
   place-items: center;
+  margin: 3rem 0;
 }

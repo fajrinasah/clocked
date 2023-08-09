@@ -17,8 +17,8 @@ export default function InputPassword({
   guidesIsShown,
   passwordIsShown,
   value,
-  onChange,
-  onBlur,
+  onChange = () => {},
+  onBlur = () => {},
 }) {
   const passwordGuides = [
     <ul>

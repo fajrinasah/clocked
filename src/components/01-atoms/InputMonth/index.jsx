@@ -9,6 +9,7 @@ export default function InputMonth({
   min = "",
   max = "",
   title = "",
+  ref,
   value,
   onChange,
   onBlur,
@@ -31,6 +32,7 @@ export default function InputMonth({
         max={max}
         pattern="[0-9]{4}-[0-9]{2}"
         title={title}
+        ref={ref}
         value={value}
         onChange={onChange}
         onBlur={onBlur}

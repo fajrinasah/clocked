@@ -5,7 +5,7 @@ export default function InputRadioSort({
   setCurrentSortingMethod = () => {},
 }) {
   return (
-    <div className="radios-container d-flex-row">
+    <div className="input-radio-sort radios-container d-flex-row">
       <div className="radio-container d-flex-row">
         <label htmlFor="sortAsc">ASC</label>
         <input

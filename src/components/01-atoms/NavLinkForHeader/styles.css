@@ -4,10 +4,12 @@ NAVLINK FOR HEADER
 
 .navlink-container-text .navlink {
   color: var(--contrast);
-  padding: 0 0.5rem;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .navlink-container-text a.active {
+  text-decoration: none;
   font-weight: bold;
   background-color: var(--contrast);
   color: var(--main);

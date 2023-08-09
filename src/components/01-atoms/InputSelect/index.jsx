@@ -7,7 +7,7 @@ export default function InputSelect({
   value,
   onChange,
   onBlur,
-  optionsArray = [],
+  optionsArray = [{ id: 1, name: "" }],
 }) {
   const RenderOptions = () => {
     return optionsArray.map((option) => {

@@ -8,7 +8,7 @@ export default function NavLinkForHeader({
   content = "",
 }) {
   return (
-    <div className={`navlink-container-text ${navlinkName}`}>
+    <div className={`navlink-container-text ${navlinkName} d-flex-row`}>
       <NavLink to={destination} className="navlink">
         {content}
       </NavLink>

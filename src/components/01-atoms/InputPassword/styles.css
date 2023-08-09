@@ -3,11 +3,12 @@ INPUT PASSWORD
 ===============================================*/
 
 .input-password {
-  width: 30rem;
+  width: 100%;
   display: grid;
   grid-template: 1fr auto / auto 1fr auto;
   grid-template-areas: "label help show" "input input input";
   align-items: center;
+  padding: 1rem 0;
 }
 
 .input-password .label-for-input {
